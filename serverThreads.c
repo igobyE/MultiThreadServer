@@ -42,7 +42,11 @@ int main(int argc, char *argv[]){
     addr_mine.sin_addr.s_addr = htonl(INADDR_ANY);
     addr_mine.sin_port = htons((unsigned short)LISTEN_PORT);
 
-    // /* Enable the socket to reuse the address */
+    // - - - - - - - - - - - - - - - - - - - - -
+    //	Enable the socket to reuse the address
+    //	Source: http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t
+    // - - - - - - - - - - - - - - - - - - - - -
+
     // if (setsockopt(sock_listen, SOL_SOCKET, SO_REUSEADDR, &reuseaddr,
     // 	sizeof(int)) == -1) {
     //     perror("setsockopt");
