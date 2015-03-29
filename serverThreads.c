@@ -1,5 +1,7 @@
 
-	/* Multiple simultaneous clients handled by threads; */
+// - - - - - - - - - - - - - - - - - - - - - - -
+//	Multiple simultaneous clients handled by threads;
+// - - - - - - - - - - - - - - - - - - - - - - -
 #include <unistd.h>
 #include <pthread.h>
 #include <string.h>
