@@ -45,7 +45,10 @@ int main(int argc, char *argv[]){
     addr_mine.sin_port = htons((unsigned short)LISTEN_PORT);
 
     // - - - - - - - - - - - - - - - - - - - - -
-    //	Enable the socket to reuse the address
+    //	Enable the socket to reuse the address.
+    //	NOTE: Having reuse enabled, connections with the same source address and
+    //		 	port can created. Read the followin article on this topic. It is
+    //			supper informative!!
     //	Source:
     //		http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t
     // - - - - - - - - - - - - - - - - - - - - -
