@@ -1,6 +1,8 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - -
 //	Multiple simultaneous clients handled by threads;
+//	Source (closing TCP connection):
+//		http://www.freesoft.org/CIE/Course/Section4/11.htm
 // - - - - - - - - - - - - - - - - - - - - - - -
 #include <unistd.h>
 #include <pthread.h>
@@ -44,7 +46,8 @@ int main(int argc, char *argv[]){
 
     // - - - - - - - - - - - - - - - - - - - - -
     //	Enable the socket to reuse the address
-    //	Source: http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t
+    //	Source:
+    //		http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t
     // - - - - - - - - - - - - - - - - - - - - -
 
     // if (setsockopt(sock_listen, SOL_SOCKET, SO_REUSEADDR, &reuseaddr,
